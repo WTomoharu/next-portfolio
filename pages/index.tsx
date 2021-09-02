@@ -1,3 +1,6 @@
+import { Tags } from "../assets/tags"
+import { TagCard } from "../components/TagCard"
+
 const Page = () => {
   return (
     <div style={{ minWidth: "400px" }}>
@@ -46,8 +49,14 @@ const Page = () => {
               <div className="w-full h-1 bg-green-500 rounded"></div>
             </div>
           </div>
-          <div className="flex justify-center items-center h-80">
-            <div className="text-3xl">Cards</div>
+          <div className="flex flex-wrap pt-4 justify-center md:justify-start">
+            {Tags.map((info, i) => (
+              <TagCard
+                title={info.name}
+                text={info.text}
+                key={i}
+              />
+            ))}
           </div>
         </section>
       </main>
