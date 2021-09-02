@@ -17,7 +17,13 @@ const Page = () => {
               <h2
                 className="text-xl md:text-2xl"
               >
-                About...
+                主にWebフロントを書いている、
+                <br className="md:hidden" />
+                プログラミング好きの人。
+                <br />
+                2004年生まれ、現在16歳。
+                <br className="md:hidden" />
+                N高等学校在籍、5期生（2年生）
               </h2>
             </div>
           </div>
