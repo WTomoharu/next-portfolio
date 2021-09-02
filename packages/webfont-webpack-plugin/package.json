@@ -1,0 +1,19 @@
+{
+  "name": "webfont-webpack-plugin",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.12.17"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "nodeify": "^1.0.1",
+    "watchpack": "^2.2.0",
+    "webfont": "^11.2.20"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "init": "yarn install && yarn build"
+  }
+}

@@ -1,3 +1,4 @@
+const WebfontPlugin = require("webfont-webpack-plugin").default
 const CopyPlugin = require("copy-webpack-plugin")
 
 const path = require("path");
@@ -16,6 +17,17 @@ module.exports = {
             to: path.join(__dirname, "public")
           },
         ],
+      }),
+    )
+
+    config.plugins.push(
+      new WebfontPlugin({
+        files: path.resolve(__dirname, "./static-files/images/tech-icons/*.svg"), // Input Files
+        dest: path.resolve(__dirname, "./public/fonts/tech-icons"), // Output Dir
+        fontName: "font-tech", // Font Name
+        fileName: "index", // Font File Name
+        templateClassName: "tech-icon", // Font Pre Class
+        template: "css", // File Output Type
       }),
     )
 
