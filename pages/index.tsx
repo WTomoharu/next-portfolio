@@ -1,5 +1,7 @@
 import { Tags } from "../assets/tags"
+import { Works } from "../assets/works"
 import { TagCard } from "../components/TagCard"
+import { WorkCard } from "../components/WorkCard"
 
 const Page = () => {
   return (
@@ -38,8 +40,13 @@ const Page = () => {
               <div className="w-full h-1 bg-green-500 rounded"></div>
             </div>
           </div>
-          <div className="flex justify-center items-center h-80">
-            <div className="text-3xl">Cards</div>
+          <div className="flex flex-wrap pt-4 justify-center md:justify-start">
+            {Works.map((work, i) => (
+              <WorkCard
+                work={work}
+                key={i}
+              />
+            ))}
           </div>
         </section>
         <section className="max-w-6xl p-2 mx-auto">
