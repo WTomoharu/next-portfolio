@@ -11,9 +11,7 @@ export const TagCard: React.VFC<TagCardProps> = ({ title, text }) => {
       <div className="bg-gray-100 p-4 rounded">
         <div className="flex flex-nowrap items-center">
           <div className="hidden sm:block">
-            <div className="w-24 h-24 flex justify-center items-center bg-gray-400">
-              <div className="text-2xl">Icon</div>
-            </div>
+            <i className={`tech-icon-${toKebabCase(title)} text-8xl text-gray-600 align-middle`} ></i>
           </div>
           <div className="sm:ml-4">
             <h4 className="text-2xl">

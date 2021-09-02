@@ -17,6 +17,12 @@ export const WorkCard: React.VFC<WorkCardProps> = ({ work: { name, id, text, tag
         {/* text-3xl text-2xl */}
         <h4 className="py-2 text-3xl">
           <span className={`text-${name.length < 20 ? 3 : 2}xl`}>{name}</span>
+
+          {links.map(({ link, icon }, i) => (
+            <a href={link} className="text-blue-700" target="_blank" rel="noopener noreferrer" key={i}>
+              <i className={`tech-icon-${toKebabCase({ Site: "OpenInNew" }[icon] ?? icon)} align-middle ml-1 -mt-1`} />
+            </a>
+          ))}
         </h4>
         <p className="pb-2">
           {text}
