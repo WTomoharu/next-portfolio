@@ -77,3 +77,5 @@ export const Works: Work[] = [
     ],
   },
 ]
+
+export const MiniWorks: Work[] = []
