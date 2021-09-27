@@ -60,5 +60,20 @@ export const Works: Work[] = [
         link: "https://github.com/WTomoharu/vue-original-calendar"
       },
     ],
-  }
+  },
+  {
+    name: "映画からの脱出", id: "escape-from-beverly-hills",
+    text: "横スクロールを基調とした、脱出ゲーム。N高の授業成果物。他の生徒との共同制作作品。",
+    tags: ["TypeScript", "React", "Next.JS", "Tailwind.css", "GitHub Actions"],
+    links: [
+      {
+        icon: "Site",
+        link: "https://n-tomoharu-watanabe.github.io/alpha-yokohama-D-17/"
+      },
+      {
+        icon: "GitHub",
+        link: "https://github.com/n-tomoharu-watanabe/alpha-yokohama-D-17"
+      },
+    ],
+  },
 ]
