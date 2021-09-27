@@ -77,3 +77,36 @@ export const Works: Work[] = [
     ],
   },
 ]
+
+export const MiniWorks: Work[] = [
+  {
+    name: "Vue Dashed Border Card", id: undefined,
+    text: "破線を枠を基調とした、画像のテキストがセットになったコンポーネント。",
+    tags: ["Vue", "Vue3"],
+    links: [
+      {
+        icon: "Site",
+        link: "https://wtomoharu.github.io/vue-dashed-border-card/"
+      },
+      {
+        icon: "GitHub",
+        link: "https://github.com/WTomoharu/vue-dashed-border-card"
+      },
+    ],
+  },
+  {
+    name: "Vue Img in Info", id: undefined,
+    text: "画像の中にテキストを埋め込むことを特徴とした、画像のテキストがセットになったコンポーネント。",
+    tags: ["Vue", "Vue3"],
+    links: [
+      {
+        icon: "Site",
+        link: "https://wtomoharu.github.io/vue-img-in-info/"
+      },
+      {
+        icon: "GitHub",
+        link: "https://github.com/WTomoharu/vue-img-in-info"
+      },
+    ],
+  },
+]
