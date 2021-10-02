@@ -12,7 +12,14 @@ export const WorkCard: React.VFC<WorkCardProps> = ({ work: { name, id, text, tag
     <div className="xl:w-1/3 md:w-1/2 w-full p-2 flex" id={`woek-${id ?? toKebabCase(name)}`}>
       <div className="bg-gray-100 p-4 rounded flex-grow">
         <div>
-          <img src={`images/works/${toKebabCase(id ?? name)}.png`} alt="" className="max-w-full h-56 m-auto" />
+          {(() => {
+            try {
+              const src = require(`../../static-files/images/works/${toKebabCase(id ?? name)}.png`)
+              return <img src={src} alt="" className="max-w-full h-56 m-auto relative" />
+            } catch {
+              return undefined
+            }
+          })()}
         </div>
         {/* text-3xl text-2xl */}
         <h4 className="py-2 text-3xl">
