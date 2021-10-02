@@ -1,12 +1,18 @@
 const WebfontPlugin = require("webfont-webpack-plugin").default
 const CopyPlugin = require("copy-webpack-plugin")
 
+const optimizedImages = require('next-optimized-images')
+
 const path = require("path");
 
 /** @type {import('next').NextConfig} */
-module.exports = {
+const config = {
   trailingSlash: true,
   reactStrictMode: true,
+
+  images: {
+    disableStaticImages: true
+  },
 
   webpack(config, options) {
     config.plugins.push(
@@ -34,3 +40,5 @@ module.exports = {
     return config
   }
 }
+
+module.exports = optimizedImages(config)
