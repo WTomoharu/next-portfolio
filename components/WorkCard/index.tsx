@@ -16,7 +16,7 @@ export const WorkCard: React.VFC<WorkCardProps> = ({ work: { name, id, text, tag
             try {
               return (
                 <picture>
-                  <source srcSet={require(`../../static-files/images/works/${toKebabCase(id ?? name)}.png?webp`)} type="image/webp" />
+                  <source srcSet={require(`../../static-files/images/works/${toKebabCase(id ?? name)}.png?resize&format=webp`).srcSet} type="image/webp" />
                   <source srcSet={require(`../../static-files/images/works/${toKebabCase(id ?? name)}.png`)} type="image/jpeg" />
                   <img src={require(`../../static-files/images/works/${toKebabCase(id ?? name)}.png`)} />
                 </picture>
