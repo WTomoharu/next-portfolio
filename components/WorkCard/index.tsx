@@ -14,8 +14,13 @@ export const WorkCard: React.VFC<WorkCardProps> = ({ work: { name, id, text, tag
         <div>
           {(() => {
             try {
-              const src = require(`../../static-files/images/works/${toKebabCase(id ?? name)}.png`)
-              return <img src={src} alt="" className="max-w-full h-56 m-auto relative" />
+              return (
+                <picture>
+                  <source srcSet={require(`../../static-files/images/works/${toKebabCase(id ?? name)}.png?webp`)} type="image/webp" />
+                  <source srcSet={require(`../../static-files/images/works/${toKebabCase(id ?? name)}.png`)} type="image/jpeg" />
+                  <img src={require(`../../static-files/images/works/${toKebabCase(id ?? name)}.png`)} />
+                </picture>
+              )
             } catch {
               return undefined
             }
