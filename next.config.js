@@ -14,6 +14,11 @@ const config = {
     disableStaticImages: true
   },
 
+  responsive: {
+    adapter: require('responsive-loader/sharp'),
+    sizes: [640, 960, 1200, 1800],
+  },
+
   webpack(config, options) {
     config.plugins.push(
       new CopyPlugin({
