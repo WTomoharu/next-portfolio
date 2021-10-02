@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Tags } from "../../assets/tags"
 import { Work } from "../../interfaces/work"
 import { toKebabCase } from "../../utils/string"
@@ -12,7 +13,9 @@ export const WorkCard: React.VFC<WorkCardProps> = ({ work: { name, id, text, tag
     <div className="xl:w-1/3 md:w-1/2 w-full p-2 flex" id={`woek-${id ?? toKebabCase(name)}`}>
       <div className="bg-gray-100 p-4 rounded flex-grow">
         <div>
-          <img src={`images/works/${toKebabCase(id ?? name)}.png`} alt="" className="max-w-full h-56 m-auto" />
+          <div className="max-w-full h-56 m-auto relative">
+            <Image src={`/images/works/${toKebabCase(id ?? name)}.png`} layout='fill' alt="" objectFit='contain' />
+          </div>
         </div>
         {/* text-3xl text-2xl */}
         <h4 className="py-2 text-3xl">
