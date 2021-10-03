@@ -3,7 +3,7 @@ export function Image({ src, ...props }: JSX.IntrinsicElements["img"]) {
     return (
       <picture>
         <source srcSet={require(`../../static-files/${src}?resize&format=webp`).srcSet} type="image/webp" />
-        <source srcSet={require(`../../static-files/${src}`)} type="image/jpeg" />
+        <source srcSet={require(`../../static-files/${src}`)} type="image/png" />
         <img src={require(`../../static-files/${src}`)} {...props} />
       </picture>
     )
